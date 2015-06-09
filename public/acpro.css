@@ -12,7 +12,7 @@ body{
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	color: #fff; 
-	opacity: 0.7;
+	opacity: 0.93;
 }
 input{
 	opacity:0.7;
@@ -20,9 +20,10 @@ input{
 }
 
 #bot{
+	margin-top: 15px;
 	 margin-left: auto;
 	 margin-right: auto;
-	 background: #003A55;
+	 background: #4D7C59;
 	 border: 0px;
 	 border-radius: 0px;
 	 font-weight:bold;
@@ -31,7 +32,7 @@ input{
 
 	 margin-left: auto;
 	 margin-right: auto;
-	 background: #003A55;
+	 background: #4D7C59;
 	 border: 0px;
 	 border-radius: 0px;
 	 font-weight:bold;

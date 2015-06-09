@@ -13,7 +13,7 @@
 		<div class="boxlogin" >
 			<br>
 				<h2>REGISTRAR ESTUDIANTE</h2>
-				<br><br>
+				<br>
 				<div class="container">
 					<center>
 					<form method="POST" name="login" ig="login" class="form-inline">
@@ -38,6 +38,11 @@
 							<input type="text" name="telefono" class="form-control">
 						</div>
 						<br><br>
+						<div class="form-group">
+							<label>EDAD</label>
+							<input type="text" name="telefono" class="form-control">
+						</div>
+						<br><br>
 
 						<div class="form-group" id="sexo">
 							<label>SEXO</label>
@@ -45,14 +50,34 @@
 							  <option>M</option>
 							  <option>F</option>
 							</select>
-						</div>
-						<br><br>
+							<label>AÑO A CURSAR</label>
+							<select class="form-control">
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							  <option>6</option>
+							  <option>7</option>
+							  <option>8</option>
+							  <option>9</option>
+							  <option>10</option>
+							  <option>11</option>
 
-						<input type="submit" class="btn btn-success" value="INGRESAR" id="bot">
+							</select>
+							<label>ESTADO</label>
+							<select class="form-control">
+							  <option>ACTIVO</option>
+							  <option>INACTIVO</option>
+							</select>
+						</div>
+						
+						
 					</form>
 					</center>
 				</div>
-	
+				
+					<input type="submit" class="btn btn-success" value="INGRESAR" id="bot">
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
