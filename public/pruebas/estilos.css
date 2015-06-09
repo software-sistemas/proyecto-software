@@ -1,0 +1,58 @@
+body{
+	background: #003A55;
+}
+header {
+	background: #2c3e50;
+	opacity: 0.8;
+	color: #fff;
+	
+}
+aside {
+	background: #DE3C3C;
+	height: 250px;
+	opacity: 0.8;
+	
+}
+
+section{
+	background: #D8D6D6;
+	height: 250px;
+	opacity: 0.8;
+	s
+}
+
+#uno{
+	background: #F0E180;
+}
+
+#dos{
+	background: #42E5EB;
+}
+
+#uno, #dos, #tres, #cuatro{
+  
+   height: 250px;
+}
+
+
+#tres, #cuatro{
+background:#FF824B;  
+}
+footer {
+	background:#2c3e50;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	opacity: .8; 
+}
+img{
+	width: 100px; 
+	height: 100px;
+}
+#titulo1{
+	margin-top: 35px;
+}
+#op{
+	opacity: 0.7;
+}
+

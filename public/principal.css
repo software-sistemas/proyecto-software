@@ -1,6 +1,10 @@
+html { 
+  overflow:hidden; 
+}
+
 header{
-	background: #4D8EA2;
-	color: #fff;
+	background: #4D7C59;
+	color: #000;
 }
 
 #titulo{
@@ -20,16 +24,18 @@ header{
 }
 
 #menu{
-	background: #80B2C1;
+	background: #8FC0A9;
 	background-size: 100%;
 }
 
 #pag{
-	background:#E0EFEB;
+	background: #8FC0A9;
 	background-image: url(imagen/3.png);
 	background-size: 580px 580px;
 	background-repeat: no-repeat;
 	background-position: center center;
+	box-shadow: 0px 2px 2px #000;
+
 }
 
 div.col-md-3{
@@ -60,20 +66,21 @@ ul{
 }
 
 button[type="button"]{
+
 	 display: block;
 	 margin-left: auto;
 	 margin-right: auto;
-	 background: #003A55;
-	 border: 0px;
-	 border-radius: 5px;
+	 background: #8FC0A9;
+	 color:#000;
 	 font-weight:bold;
 	 margin-top: 50px;
-	 opacity: 0.8;
+	 opacity: 0.7;
 	 height: 55px;
 	 width: 230px;
-}
+	 border-color: #000;
+	}
 
-#dentro{
+iframe{
 	height: 500px;
 	width: 990px;
 	margin: 0px;
