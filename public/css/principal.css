@@ -1,0 +1,99 @@
+html { 
+  overflow:hidden; 
+}
+
+header{
+	background: #4D7C59;
+	color: #fff;
+}
+
+#titulo{
+   	font-size: 40px;
+	text-align: center;
+	font-family: verdana;
+	font-weight:bold;
+}
+
+#logo-sup{
+	height: 150px;
+	width: 150px;
+}
+
+#text-cab{
+	margin-top: 30px;
+}
+
+#menu{
+	background: #f6f6f6;
+	background-size: 100%;
+}
+
+#pag{
+	background: #f6f6f6;
+	background-image: url(../imagen/3.png);
+	background-size: 580px 580px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	box-shadow: 0px 2px 2px #000;
+
+}
+
+div.col-md-3{
+	height:517px;
+}
+
+div.col-md-9{
+	height:517px;	
+}
+
+span{
+	margin-right: 0px;
+}
+
+li{
+	background: #4D7C59;
+}
+p{
+	font-family: Helvetica;
+	color: #000;
+	font-weight:bold;
+}
+
+ul{
+	display: block;
+	border-radius: 0px;
+	opacity: 0.8;
+}
+
+button[type="button"]{
+
+	 display: block;
+	 margin-left: auto;
+	 margin-right: auto;
+	 background: #8FC0A9;
+	 color:#000;
+	 font-weight:bold;
+	 margin-top: 50px;
+	 opacity: 0.7;
+	 height: 55px;
+	 width: 230px;
+	 border-color: #000;
+	 background-clip: #4D7C59;
+	}
+
+button[type="button"]:hover{
+background: #4D7C59;
+color: #fff;
+}
+
+iframe{
+	height: 500px;
+	width: 990px;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+.btn-tcc:active{
+	background: #fff;
+}

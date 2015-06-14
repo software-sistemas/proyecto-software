@@ -13,7 +13,38 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+//Route::get('home', 'HomeController@index');
+Route::resource('login', 'LoginController');
+
+Route::resource('pag-principal3', 'Pagprincipal3Controller');
+//               como quiera buscarlo , nombre del controlador
+
+Route::resource('regalum', 'RegalumController');
+
+Route::resource('actualizarest', 'ActualizarestController');
+
+Route::resource('regasigest', 'RegasigestController');
+
+Route::resource('regnotas', 'RegnotalController');
+
+Route::resource('vernotalum', 'VernotalumController');
+
+Route::resource('datgenalum', 'DatgenalumController');
+
+Route::resource('regprofesor', 'RegprofesorController');
+
+Route::resource('actprof', 'ActprofController');
+
+Route::resource('regasigprof', 'RegasigprofController');
+
+Route::resource('datgenprof', 'DatgenprofController');
+
+Route::resource('regasignatura', 'RegasignaturaController');
+
+Route::resource('actasignatura', 'ActdatasigController');
+
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

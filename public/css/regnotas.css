@@ -1,0 +1,60 @@
+body{
+	background: transparent;
+}
+
+.boxlogin{
+	background: #000;
+	margin: 0px 0px;
+	padding: 50px;
+	height: 740px;
+	width: 100%;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	color: #fff; 
+	opacity: 0.93;
+}
+input{
+	opacity:0.7;
+	font-weight:bold;
+}
+
+#bot{
+	 margin-left: auto;
+	 margin-right: auto;
+	 background: #4D7C59;
+	 border: 0px;
+	 border-radius: 0px;
+	 font-weight:bold;
+}
+#b{
+
+	 margin-left: auto;
+	 margin-right: auto;
+	 background: #4D7C59;
+	 border: 0px;
+	 border-radius: 0px;
+	 font-weight:bold;
+}
+
+h2 {
+	text-align: center;
+	font-weight:bold;
+	font-size: 40px;	
+	padding: -100px; 
+	margin:-40px;
+}
+
+
+
+
+div.form-group{
+	text-align: center;
+}
+
+label { 
+	display: inline-block; 
+	width: 150px; 
+ }​
+
+ 
