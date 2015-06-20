@@ -14,71 +14,84 @@
 			<br>
 				<h2>REGISTRAR ESTUDIANTE</h2>
 				<br>
-				<div class="container">
+				<div class="container">		
+											
 					<center>
-					<form method="POST" name="login" ig="login" class="form-inline">
-						
+					<!--<form method="POST" name="login" ig="login" class="form-inline">-->
+						{!! Form::open(['route' => 'formulario.store', 'method' => 'POST','class' => 'form-inline']) !!}
 						<div class="form-group">
-							<label >NOMBRE</label>
-							<input type="text" name="nombre" class="form-control">
+							{!! Form::label('idestudiante', 'IDENTIFICACION') !!}
+							{!! Form::text('idestudiante', null,['class' => 'form-control']) !!}
+							@if($errors->has())						
+								<b class="text-danger" >{{ $errors->first('idestudiante') }}</b>					
+							@endif
 						</div>
 						<br><br>								
 						<div class="form-group">
-							<label>APELLIDOS</label>
-							<input type="text" name="apellido" class="form-control">
+							{!! Form::label('nombre', 'NOMBRES') !!}
+							{!! Form::text('nombre', null,['class' => 'form-control']) !!}
+							@if($errors->has())						
+								<b class="text-danger">{{ $errors->first('nombre') }}</b>						
+							@endif
 						</div>
 						<br><br>
 						<div class="form-group">
-							<label >IDENTIFICACION</label>
-							<input type="text" name="id"  class="form-control">
+							{!! Form::label('apellido', 'APELLIDOS') !!}
+							{!! Form::text('apellido', null,['class' => 'form-control']) !!}	
+							@if($errors->has())						
+								<b class="text-danger">{{ $errors->first('apellido') }}</b>						
+							@endif						
 						</div>
 						<br><br>								
 						<div class="form-group">
-							<label>TELEFONO</label>
-							<input type="text" name="telefono" class="form-control">
+							{!! Form::label('telefono', 'TELEFONO') !!}
+							{!! Form::text('telefono', null,['class' => 'form-control']) !!}	
+							@if($errors->has())						
+								<b class="text-danger">{{ $errors->first('telefono') }}</b>						
+							@endif
 						</div>
 						<br><br>
 						<div class="form-group">
-							<label>EDAD</label>
-							<input type="text" name="telefono" class="form-control">
+							{!! Form::label('edad', 'EDAD') !!}
+							{!! Form::text('edad', null,['class' => 'form-control']) !!}	
+							@if($errors->has())						
+								<b class="text-danger">{{ $errors->first('edad') }}</b>						
+							@endif
 						</div>
 						<br><br>
 
 						<div class="form-group" id="sexo">
-							<label>SEXO</label>
-							<select class="form-control">
-							  <option>M</option>
-							  <option>F</option>
-							</select>
-							<label>AÑO A CURSAR</label>
-							<select class="form-control">
-							  <option>1</option>
-							  <option>2</option>
-							  <option>3</option>
-							  <option>4</option>
-							  <option>5</option>
-							  <option>6</option>
-							  <option>7</option>
-							  <option>8</option>
-							  <option>9</option>
-							  <option>10</option>
-							  <option>11</option>
-
-							</select>
-							<label>ESTADO</label>
-							<select class="form-control">
-							  <option>ACTIVO</option>
-							  <option>INACTIVO</option>
-							</select>
+							{!! Form::label('sexo', 'SEXO') !!}
+							{!! Form::select('sexo', ['masculino' => 'M', 'femenino' => 'F'], null, ['class' => 'form-control']) !!}	
+							
+							{!! Form::label('anio', 'CURSO') !!}
+							{!! Form::select('anio', ['uno' => '1', 'dos' => '2', 'tres' => '3', 'cuatro' => '4', 'cinco' => '5', 'seis' => '6', 'siete' => '7', 'ocho' => '8', 'nueve' => '9', 'diez' => '10', 'once' => '11'], null, ['class' => 'form-control']) !!}
+							
+							{!! Form::label('estado', 'ESTADO') !!}
+							{!! Form::select('estado', ['activo' => 'ACTIVO', 'inactivo' => 'INACTIVO'], null, ['class' => 'form-control']) !!}	
 						</div>
+
+						<!--<button type="submit" class="btn btn-success"  id="bot">
+							INGRESAR
+						</button>-->
 						
-						
-					</form>
+						{!! Form::submit('INGRESAR', ['class' => 'btn btn-success', 'id' => 'bot']) !!}
+					{!! Form::close() !!}
 					</center>
 				</div>
-				
-					<input type="submit" class="btn btn-success" value="INGRESAR" id="bot">
+
 	<script src="{{ asset ('js/jquery.js') }}"></script>
 	<script src="{{ asset ('js/bootstrap.js') }}"></script>
+
+
+	<!--@if($errors->any())
+		<ul class="alert alert-danger">
+			@foreach ($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
+
+		</ul>
+	@endif-->
+
 </body>
 </html>

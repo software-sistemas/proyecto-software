@@ -2,8 +2,9 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\profesor;
 
-use Illuminate\Http\Request;
+use Request;
 
 class RegprofesorController extends Controller {
 
@@ -34,7 +35,18 @@ class RegprofesorController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$input = Request::all();
+
+	    $profesor = new profesor;
+	   	$profesor-> idprofesor = $input['idprofesor']; 
+	   	$profesor-> nombre = $input['nombre'];
+	   	$profesor-> apellido = $input['apellido']; 
+	   	$profesor-> telefono = $input['telefono'];
+	   	$profesor-> direccion = $input['direccion']; 
+	   	$profesor-> sexo = $input['sexo'];
+	   	$profesor-> estado = $input['estado'];   
+	    $profesor-> save();
+	    return redirect('regprofesor');
 	}
 
 	/**

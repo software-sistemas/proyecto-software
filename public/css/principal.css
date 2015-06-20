@@ -8,7 +8,7 @@ header{
 }
 
 #titulo{
-   	font-size: 40px;
+   	font-size: 38px;
 	text-align: center;
 	font-family: verdana;
 	font-weight:bold;
@@ -96,4 +96,13 @@ iframe{
 
 .btn-tcc:active{
 	background: #fff;
+}
+
+
+#boton{
+	margin-top: 53px;
+	float:left;
+	background: #4D7C59;
+	color: #fff;
+
 }

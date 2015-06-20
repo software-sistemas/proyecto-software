@@ -1,9 +1,18 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+//llamada al archivo de validacion
+use App\Http\Requests\formularioRequest;
+
+use App\Http\Controllers\Controller;
+//llama al modelo
+use App\estudiante;
+
+//recortar link
+use Request;
+
+
 
 class RegalumController extends Controller {
 
@@ -32,9 +41,39 @@ class RegalumController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+
+	//llamar request como parametro acontinuacion:
+	public function store(formularioRequest $request)
 	{
-		//
+	//solo recibir un parametro
+		// $input = Request::get('nombre');
+
+	//los llama a todos:
+	      //$input = Request::all();
+	      //estudiante::create($input);
+	      //return redirect('formulario');
+
+    //llamanto a todos con all();
+	    //$estudiante = new estudiante
+	    //$estudiante->nombre=$input ['nombre']; 
+	    //$estudiante->save();
+
+	    $estudiante = new estudiante;
+	   	$estudiante-> idestudiante = $request['idestudiante']; 
+	   	$estudiante-> nombre = $request['nombre'];
+	   	$estudiante-> apellido = $request['apellido']; 
+	   	$estudiante-> telefono = $request['telefono'];
+	   	$estudiante-> edad = $request['edad']; 
+	   	$estudiante-> sexo = $request['sexo'];
+	   	$estudiante-> estado = $request['estado'];   
+	    $estudiante-> save();
+	    return redirect('formulario');
+
+
+
+    //hay que poner parametros ($request request)
+		//$estudiante = new prueba($request->all());
+		//$estudiante->save();
 	}
 
 	/**

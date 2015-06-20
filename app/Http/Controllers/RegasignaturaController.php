@@ -2,8 +2,9 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\asignatura;
 
-use Illuminate\Http\Request;
+use Request;
 
 class RegasignaturaController extends Controller {
 
@@ -34,7 +35,14 @@ class RegasignaturaController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		$input = Request::all();
+
+	    $asignatura = new asignatura;
+	   	$asignatura-> codigo = $input['codigo']; 
+	   	$asignatura-> nombre = $input['nombre'];
+	   	$asignatura-> estado = $input['estado'];   
+	    $asignatura-> save();
+	    return redirect('regasignatura');
 	}
 
 	/**

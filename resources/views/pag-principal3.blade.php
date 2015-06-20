@@ -22,32 +22,79 @@
 		    			var elegir = $(this).attr('id');
 		    			
 		    			if(elegir == 1){
-		    				
+		    			
+		    				$('#actualizar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');
+		    				$('#regprof').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: visible');
 		    				$('#registrar').attr('style','display: visible');
 
 		    			}else if(elegir == 2){
 		    				
 		    				$('#registrar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');
+		    				$('#regprof').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
 		    				$('#actualizar').attr('style','display: visible');
+
 		    			}else if(elegir == 3){
 		    					
-		    					$('#registrar').attr('style','display: none');
-		    					$('#actualizar').attr('style','display: none');
-		    					$('#regasigest').attr('style','display: visible');
+		    				$('#registrar').attr('style','display: none');
+		    				$('#actualizar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');		    				
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');
+		    				$('#regprof').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: visible');
+
 		    			}else if(elegir == 4){
 		    				
 		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
+		    				$('#actualizar').attr('style','display: none');		    				
 		    				$('#regasigest').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');
+		    				$('#regprof').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
 		    				$('#regnotas').attr('style','display: visible');
+
 		    			}else if(elegir == 5){
 		    					
-		    					$('#registrar').attr('style','display: none');
-		    					$('#actualizar').attr('style','display: none');
-		    					$('#regnotas').attr('style','display: none');
-		    					$('#regasigest').attr('style','display: none');
-		    					$('#vernotalu').attr('style','display: visible');
-
+		    				$('#registrar').attr('style','display: none');
+		    				$('#actualizar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: none');		    				
+		    				$('#datgenalum').attr('style','display: none');
+		    				$('#regprof').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: visible');
 
 		    			}else if(elegir == 6){
 		    				
@@ -56,6 +103,12 @@
 		    				$('#regnotas').attr('style','display: none');
 		    				$('#regasigest').attr('style','display: none');
 		    				$('#vernotalu').attr('style','display: none');
+		    				$('#regprof').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
 		    				$('#datgenalum').attr('style','display: visible');
 		    			}
 		    		});
@@ -65,34 +118,69 @@
 			case 'profesor':
 
 			$("#profe a").each(function(){   
-							$('#registrar').attr('style','display: none');
+							
+		    		$(this).click(function(){
+		    			var seleccionar = $(this).attr('id');
+		    			
+		    			if(seleccionar == 1){
+
+		    				$('#registrar').attr('style','display: none');
+		    				$('#actualizar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');		    				
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
+		    				$('#regprof').attr('style','display: visible');
+
+		    			}else if(seleccionar == 2){
+
+		    				$('#registrar').attr('style','display: none');
 		    				$('#actualizar').attr('style','display: none');
 		    				$('#regnotas').attr('style','display: none');
 		    				$('#regasigest').attr('style','display: none');
 		    				$('#vernotalu').attr('style','display: none');
 		    				$('#datgenalum').attr('style','display: none');
-		    		$(this).click(function(){
-		    			var seleccionar = $(this).attr('id');
-		    			
-		    			if(seleccionar == 1){
-		    				
-		    				$('#regprof').attr('style','display: visible');
-
-		    			}else if(seleccionar == 2){
 		    				$('#regprof').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
 		    				$('#actpro').attr('style','display: visible');
+
 		    			}else if(seleccionar == 3){
+
+		    				$('#registrar').attr('style','display: none');
+		    				$('#actualizar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');
 		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');		    				
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: none');
 		    				$('#regasigprof').attr('style','display: visible');
 		    					
-		    			}else if(seleccionar == 4){
+		    			}else if(seleccionar == 4){		    				
+
+		    				$('#registrar').attr('style','display: none');
+		    				$('#actualizar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');
 		    				$('#regprof').attr('style','display: none');
 		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');  		
+		    				$('#regasignatura').attr('style','display: none');
+		    				$('#actdatasig').attr('style','display: none');
 		    				$('#datosgenprof').attr('style','display: visible');
-
-
 		    			}
 		    		});
 		    	});
@@ -101,25 +189,37 @@
 
 			case 'asignatura':
 			$("#asigna a").each(function(){   
-							$('#registrar').attr('style','display: none');
+							
+		    		$(this).click(function(){
+		    			var apunt = $(this).attr('id');
+		    			
+		    			if(apunt == 1){
+
+		    				$('#registrar').attr('style','display: none');
 		    				$('#actualizar').attr('style','display: none');
 		    				$('#regnotas').attr('style','display: none');
 		    				$('#regasigest').attr('style','display: none');
 		    				$('#vernotalu').attr('style','display: none');
 		    				$('#datgenalum').attr('style','display: none');
+		    				$('#regprof').attr('style','display: none');
+		    				$('#actpro').attr('style','display: none');
+		    				$('#regasigprof').attr('style','display: none');
+		    				$('#datosgenprof').attr('style','display: none');		    				
+		    				$('#actdatasig').attr('style','display: none');
+		    				$('#regasignatura').attr('style','display: visible');
 
+		    			}else if(apunt == 2){
+
+		    				$('#registrar').attr('style','display: none');
+		    				$('#actualizar').attr('style','display: none');
+		    				$('#regnotas').attr('style','display: none');
+		    				$('#regasigest').attr('style','display: none');
+		    				$('#vernotalu').attr('style','display: none');
+		    				$('#datgenalum').attr('style','display: none');
 		    				$('#regprof').attr('style','display: none');
 		    				$('#actpro').attr('style','display: none');
 		    				$('#regasigprof').attr('style','display: none');
 		    				$('#datosgenprof').attr('style','display: none');
-		    		$(this).click(function(){
-		    			var apunt = $(this).attr('id');
-		    			
-		    			if(apunt == 1){
-		    				
-		    				$('#regasignatura').attr('style','display: visible');
-
-		    			}else if(apunt == 2){
 		    				$('#regasignatura').attr('style','display: none');
 		    				$('#actdatasig').attr('style','display: visible');
 		    			}
@@ -146,8 +246,11 @@
 			<div class="col-md-1">
 				<img src="imagen/logo-new.png" id="logo-sup">
 			</div>
-			<div class="col-md-11" id="text-cab">
+			<div class="col-md-10" id="text-cab">
 				<h1 id="titulo">INSTITUCIÓN EDUCATIVA ING DE SOFTWARE</h1>
+			</div>
+			<div class="col-md-1">
+				<button class="btn btn-success" id="boton" >SALIR</button>
 			</div>
 		</div>
 	</header>
@@ -202,7 +305,7 @@
 
 			<div class="col-md-9 bordeinset" id="pag">
 				
-				 <iframe id="registrar" src="regalum" scrolling="no" style="display: none";></iframe>
+				 <iframe id="registrar" src="formulario" scrolling="no" style="display: none";></iframe>
 				 <iframe id="actualizar" src="actualizarest" scrolling="no" style="display: none";></iframe>
 				 <iframe id="regasigest" src="regasigest" scrolling="no" style="display: none";></iframe>
 				 <iframe id="regnotas" src="regnotas" scrolling="no" style="display: none";></iframe>

@@ -14,30 +14,30 @@
 				<br><br><br><br>
 				<div class="container">
 					<center>
-					<form method="POST" name="login" ig="login" class="form-inline">
-						
+				{!! Form::open(['route' => 'regasignatura.store', 'method' => 'POST','class' => 'form-inline']) !!}
 						<div class="form-group">
-							<label >NOMBRE ASIGNATURA</label>
-							<input type="text" name="nombre" class="form-control">
+							{!! Form::label('codigo', 'CODIGO') !!}
+							{!! Form::text('codigo', null,['class' => 'form-control']) !!}
 						</div>
 						<br><br>								
 						<div class="form-group">
-							<label>CODIGO ASIGNATURA</label>
-							<input type="text" name="apellido" class="form-control">
+							{!! Form::label('nombre', 'NOMBRE') !!}
+							{!! Form::text('nombre', null,['class' => 'form-control']) !!}
 						</div>
 						<br><br>
+						<div class="form-group" id="estad">
+							{!! Form::label('estado', 'ESTADO') !!}
+							{!! Form::select('estado', ['activo' => 'ACTIVO', 'inactivo' => 'INACTIVO'], null, ['class' => 'form-control']) !!}	
+						</div>
 
-						<!--<div class="form-group" id="sexo">
-							<label>SEXO</label>
-							<select class="form-control">
-							  <option>M</option>
-							  <option>F</option>
-							</select>
-						</div>-->
-						
-
-						<input type="submit" class="btn btn-success" value="INGRESAR" id="bot">
-					</form>
+						<!--<button type="submit" class="btn btn-success"  id="bot">
+							INGRESAR
+						</button>-->
+								<br>
+								<br>
+								<br>
+						{!! Form::submit('INGRESAR', ['class' => 'btn btn-success', 'id' => 'bot']) !!}
+					{!! Form::close() !!}
 					</center>
 				</div>
 	

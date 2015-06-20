@@ -19,7 +19,7 @@ Route::resource('login', 'LoginController');
 Route::resource('pag-principal3', 'Pagprincipal3Controller');
 //               como quiera buscarlo , nombre del controlador
 
-Route::resource('regalum', 'RegalumController');
+Route::resource('formulario', 'RegalumController');
 
 Route::resource('actualizarest', 'ActualizarestController');
 

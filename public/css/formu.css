@@ -23,7 +23,7 @@ input{
 #bot{
 	 display: block;
 	 margin-top: 25px;
-	 margin-left: 500px;
+	 margin-left: auto;
 	 margin-right: auto;
 	 background: #4D7C59;
 	 border: 0px;

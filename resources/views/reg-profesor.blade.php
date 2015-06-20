@@ -14,45 +14,49 @@
 				<br><br><br><br>
 				<div class="container">
 					<center>
-					<form method="POST" name="login" ig="login" class="form-inline">
-						
+					{!! Form::open(['route' => 'regprofesor.store', 'method' => 'POST','class' => 'form-inline']) !!}
 						<div class="form-group">
-							<label >NOMBRE</label>
-							<input type="text" name="nombre" class="form-control">
+							{!! Form::label('idprofesor', 'IDENTIFICACION') !!}
+							{!! Form::text('idprofesor', null,['class' => 'form-control']) !!}
 						</div>
 						<br><br>								
 						<div class="form-group">
-							<label>APELLIDOS</label>
-							<input type="text" name="apellido" class="form-control">
+							{!! Form::label('nombre', 'NOMBRES') !!}
+							{!! Form::text('nombre', null,['class' => 'form-control']) !!}
 						</div>
 						<br><br>
 						<div class="form-group">
-							<label >IDENTIFICACION</label>
-							<input type="text" name="id"  class="form-control">
+							{!! Form::label('apellido', 'APELLIDOS') !!}
+							{!! Form::text('apellido', null,['class' => 'form-control']) !!}							
 						</div>
 						<br><br>								
 						<div class="form-group">
-							<label>TELEFONO</label>
-							<input type="text" name="telefono" class="form-control">
+							{!! Form::label('telefono', 'TELEFONO') !!}
+							{!! Form::text('telefono', null,['class' => 'form-control']) !!}	
 						</div>
 						<br><br>
 						<div class="form-group">
-							<label>DIRECCION</label>
-							<input type="text" name="telefono" class="form-control">
+							{!! Form::label('direccion', 'DIRECCION') !!}
+							{!! Form::text('direccion', null,['class' => 'form-control']) !!}	
+							
 						</div>
 						<br><br>
 
 						<div class="form-group" id="sexo">
-							<label>SEXO</label>
-							<select class="form-control">
-							  <option>M</option>
-							  <option>F</option>
-							</select>
+							{!! Form::label('sexo', 'SEXO') !!}
+							{!! Form::select('sexo', ['masculino' => 'M', 'femenino' => 'F'], null, ['class' => 'form-control']) !!}	
+							
+							
+							{!! Form::label('estado', 'ESTADO') !!}
+							{!! Form::select('estado', ['activo' => 'ACTIVO', 'inactivo' => 'INACTIVO'], null, ['class' => 'form-control']) !!}	
 						</div>
-						<br><br>
 
-						<input type="submit" class="btn btn-success" value="INGRESAR" id="bot">
-					</form>
+						<!--<button type="submit" class="btn btn-success"  id="bot">
+							INGRESAR
+						</button>-->
+						<br><br>
+						{!! Form::submit('INGRESAR', ['class' => 'btn btn-success', 'id' => 'bot']) !!}
+					{!! Form::close() !!}
 					</center>
 				</div>
 	
