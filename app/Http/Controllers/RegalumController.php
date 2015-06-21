@@ -59,7 +59,7 @@ class RegalumController extends Controller {
 	    //$estudiante->save();
 
 	    $estudiante = new estudiante;
-	   	$estudiante-> idestudiante = $request['idestudiante']; 
+	   	$estudiante-> id = $request['id']; 
 	   	$estudiante-> nombre = $request['nombre'];
 	   	$estudiante-> apellido = $request['apellido']; 
 	   	$estudiante-> telefono = $request['telefono'];
@@ -95,7 +95,8 @@ class RegalumController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		$estudiante= estudiante::find($id);
+		return view('actualizarest', compact('estudiante'));
 	}
 
 	/**

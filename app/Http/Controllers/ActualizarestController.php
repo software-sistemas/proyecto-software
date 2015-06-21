@@ -1,7 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\actualizarestRequest;
 use App\Http\Controllers\Controller;
+use App\estudiante;
 
 use Illuminate\Http\Request;
 
@@ -32,9 +34,18 @@ class ActualizarestController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(actualizarestRequest $Request)
 	{
-		//
+		$estudiante = new estudiante;
+	   	$estudiante-> id = $request['id']; 
+	   	$estudiante-> nombre = $request['nombre'];
+	   	$estudiante-> apellido = $request['apellido']; 
+	   	$estudiante-> telefono = $request['telefono'];
+	   	$estudiante-> edad = $request['edad']; 
+	   	$estudiante-> sexo = $request['sexo'];
+	   	$estudiante-> estado = $request['estado'];   
+	    $estudiante-> save();
+	    return redirect('actualizarest');
 	}
 
 	/**
@@ -56,7 +67,11 @@ class ActualizarestController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		
+		$estudiante = estudiante::find($id);
+		return view('actualizarest', compact('estudiante'));
+		//$actualizarest = estudiante::find($id);
+		//return redirect('actualizarest.edit', compact('actualizarest'));
 	}
 
 	/**
@@ -65,9 +80,15 @@ class ActualizarestController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, actualizarestRequest $request)
 	{
-		//
+
+		$estudiante = estudiante::find($id);
+		
+		$estudiante->update($request->all()); 
+	   	
+		return redirect('formulario');
+
 	}
 
 	/**

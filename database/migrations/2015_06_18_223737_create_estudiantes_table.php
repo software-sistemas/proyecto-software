@@ -14,7 +14,7 @@ class CreateEstudiantesTable extends Migration {
 	{
 		Schema::create('estudiantes', function(Blueprint $table)
 		{
-			$table->string('idestudiante');
+			$table->string('id');
 			$table->string('nombre');
 			$table->string('apellido');
 			$table->string('telefono');
@@ -22,7 +22,7 @@ class CreateEstudiantesTable extends Migration {
 			$table->string('sexo');
 			$table->string('estado');
 			$table->timestamps();
-			$table->primary('idestudiante');
+			$table->primary('id');
 		});
 	}
 

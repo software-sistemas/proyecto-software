@@ -20,7 +20,7 @@ class CreateMatriculasTable extends Migration {
 
 			$table->string('idestudiantem');
 			$table->foreign('idestudiantem')
-			->references('idestudiante')
+			->references('id')
 			->on('estudiantes')
 			->onDelete('cascade');
 

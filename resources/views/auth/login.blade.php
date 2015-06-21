@@ -1,15 +1,25 @@
-@extends('app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LOGIN</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{{ asset ('css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ asset ('css/login.css') }}">
+</head>
+<body>
+					
+						<div id="fondo1">
+			<h1>INSTITUCIÓN EDUCATIVA ING DE SOFTWARE</h1>
+	<div class="jumbotron boxlogin">
+				<div class="container">
+				<h2>Iniciar sesión</h2>
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+					
 
-@section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
+@if (count($errors) > 0)
 						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
+							
 							<ul>
 								@foreach ($errors->all() as $error)
 									<li>{{ $error }}</li>
@@ -18,44 +28,25 @@
 						</div>
 					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
+<div class="form-group">
+							<label >USUARIO</label>
+							<input type="text" name="usuario" id="user" class="form-control">
 						</div>
-
 						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
+							<label>CONTRASEÑA</label>
+							<input type="password" name="password" id="password" class="form-control">
 						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">Login</button>
-
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-							</div>
-						</div>
+						<input type="submit" class="btn btn-success" value="INGRESAR" id="bot">
+						
+					
 					</form>
 				</div>
-			</div>
+		
 		</div>
 	</div>
-</div>
-@endsection
+	<script src="{{ asset ('js/jquery.js') }}"></script>
+	<script src="{{ asset ('js/bootstrap.js') }}"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class formularioRequest extends Request {
+class actualizarestRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,12 +22,11 @@ class formularioRequest extends Request {
 	public function rules()
 	{
 		return [
-			'id' => 'required|numeric',
+			'id' => 'required|numeric|',
 			'nombre' => 'required',
 			'apellido' => 'required',
 			'telefono' => 'required|numeric',
 			'edad' => 'required|integer',
-
 		];
 	}
 

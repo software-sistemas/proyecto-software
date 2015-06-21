@@ -9,238 +9,25 @@
 	<link rel="stylesheet" href="{{ asset ('js/jquery.js') }}">
     <script type="text/javascript" src="{{ asset ('js/jquery.js') }}"></script>
    
-   	<script type="text/javascript">
-	$(document).ready(function(){
-	    $("button").each(function(){
-	    	$(this).click(function(){
-	    		var tocar =	$(this).attr('id');
-	    	
-	    	switch(tocar){
-	    	case 'estudiante':
-		    	$("#estud a").each(function(){   
-		    		$(this).click(function(){
-		    			var elegir = $(this).attr('id');
-		    			
-		    			if(elegir == 1){
-		    			
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: visible');
-		    				$('#registrar').attr('style','display: visible');
-
-		    			}else if(elegir == 2){
-		    				
-		    				$('#registrar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: visible');
-
-		    			}else if(elegir == 3){
-		    					
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');		    				
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: visible');
-
-		    			}else if(elegir == 4){
-		    				
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');		    				
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: visible');
-
-		    			}else if(elegir == 5){
-		    					
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');		    				
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: visible');
-
-		    			}else if(elegir == 6){
-		    				
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: visible');
-		    			}
-		    		});
-		    	});
-			break;
-
-			case 'profesor':
-
-			$("#profe a").each(function(){   
-							
-		    		$(this).click(function(){
-		    			var seleccionar = $(this).attr('id');
-		    			
-		    			if(seleccionar == 1){
-
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');		    				
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#regprof').attr('style','display: visible');
-
-		    			}else if(seleccionar == 2){
-
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#actpro').attr('style','display: visible');
-
-		    			}else if(seleccionar == 3){
-
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');		    				
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: visible');
-		    					
-		    			}else if(seleccionar == 4){		    				
-
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');  		
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: visible');
-		    			}
-		    		});
-		    	});
-
-			break;
-
-			case 'asignatura':
-			$("#asigna a").each(function(){   
-							
-		    		$(this).click(function(){
-		    			var apunt = $(this).attr('id');
-		    			
-		    			if(apunt == 1){
-
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');		    				
-		    				$('#actdatasig').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: visible');
-
-		    			}else if(apunt == 2){
-
-		    				$('#registrar').attr('style','display: none');
-		    				$('#actualizar').attr('style','display: none');
-		    				$('#regnotas').attr('style','display: none');
-		    				$('#regasigest').attr('style','display: none');
-		    				$('#vernotalu').attr('style','display: none');
-		    				$('#datgenalum').attr('style','display: none');
-		    				$('#regprof').attr('style','display: none');
-		    				$('#actpro').attr('style','display: none');
-		    				$('#regasigprof').attr('style','display: none');
-		    				$('#datosgenprof').attr('style','display: none');
-		    				$('#regasignatura').attr('style','display: none');
-		    				$('#actdatasig').attr('style','display: visible');
-		    			}
-		    		});
-		    	});
-			break;
-
-			default:
-			break;
-			}
-			});
-	    });
-	});
-		
-
-    </script>
-
- 
-
+   
 </head>
 <body>
+
+				<ul class="nav navbar-nav navbar-right">
+					@if (Auth::guest())
+					<li class="dropdown " >
+							
+						</li>
+					@else
+						<li class="dropdown cerr">
+							<a href="#" style="color:grey;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->usuario }} <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu" >
+								<li><a  href="{{ url('/auth/logout') }}">Cerrar Sesión</a></li>
+							</ul>
+						</li>
+					@endif
+				</ul>
+
 	<header>
 		<div class="container-fluid">
 			<div class="col-md-1">
@@ -249,9 +36,7 @@
 			<div class="col-md-10" id="text-cab">
 				<h1 id="titulo">INSTITUCIÓN EDUCATIVA ING DE SOFTWARE</h1>
 			</div>
-			<div class="col-md-1">
-				<button class="btn btn-success" id="boton" >SALIR</button>
-			</div>
+			
 		</div>
 	</header>
 
@@ -265,12 +50,12 @@
 				</button>
 					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="estudiante" id="estud">
 					
-						<li><a id="1" href="#"><p>REGISTRAR</p></a></li>
-						<li><a id="2" href="#"><p>ACTUALIZAR</p></a></li>
-						<li><a id="3" href="#"><p>REGISTRAR ASIGNATURA</p></a></li>
-						<li><a id="4" href="#"><p>REGISTRAR NOTAS</p></a></li>
-						<li><a id="5" href="#"><p>VER NOTAS</p></a></li>
-						<li><a id="6" href="#"><p>DATOS GENERALES</p></a></li>
+						<li><a id="1" href="formulario"><p>REGISTRAR</p></a></li>
+						<li><a id="2" href="actualizarest"><p>ACTUALIZAR</p></a></li>
+						<li><a id="3" href="regasigest"><p>REGISTRAR ASIGNATURA</p></a></li>
+						<li><a id="4" href="regnotas"><p>REGISTRAR NOTAS</p></a></li>
+						<li><a id="5" href="vernotalum"><p>VER NOTAS</p></a></li>
+						<li><a id="6" href="datgenalum"><p>DATOS GENERALES</p></a></li>
 					</ul>
 			</div>
      		<br>
@@ -281,10 +66,10 @@
 					<span class="caret"></span>
 				</button>
 					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="profesor" id="profe">
-						<li><a id="1" href="#"><p>REGISTRAR</p></a></li>
-						<li><a id="2" href="#"><p>ACTUALIZAR</p></a></li>
-						<li><a id="3" href="#"><p>REGISTRAR ASIGNATURA</p></a></li>
-						<li><a id="4" href="#"><p>DATOS GENERALES</p></a></li>
+						<li><a id="1" href="regprofesor"><p>REGISTRAR</p></a></li>
+						<li><a id="2" href="actprof"><p>ACTUALIZAR</p></a></li>
+						<li><a id="3" href="regasigprof"><p>REGISTRAR ASIGNATURA</p></a></li>
+						<li><a id="4" href="datgenprof"><p>DATOS GENERALES</p></a></li>
 					</ul>
 			</div>
 			<br>
@@ -295,34 +80,16 @@
 					<span class="caret"></span> 
 				</button>
 					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="asignatura" id="asigna">
-						<li><a id="1" href="#"><p>REGISTRAR</p></a></li>
-						<li><a id="2" href="#"><p>ACTUALIZAR</p></a></li>
+						<li><a id="1" href="regasignatura"><p>REGISTRAR</p></a></li>
+						<li><a id="2" href="actasignatura"><p>ACTUALIZAR</p></a></li>
 					</ul>
 			</div>
 			<br>
 
-		</div class>
+		</div>
 
 			<div class="col-md-9 bordeinset" id="pag">
 				
-				 <iframe id="registrar" src="formulario" scrolling="no" style="display: none";></iframe>
-				 <iframe id="actualizar" src="actualizarest" scrolling="no" style="display: none";></iframe>
-				 <iframe id="regasigest" src="regasigest" scrolling="no" style="display: none";></iframe>
-				 <iframe id="regnotas" src="regnotas" scrolling="no" style="display: none";></iframe>
-				 <iframe id="vernotalu" src="vernotalum" scrolling="no" style="display: none";></iframe>
-				 <iframe id="datgenalum" src="datgenalum" scrolling="no" style="display: none";></iframe>
-
-
-				 <iframe id="regprof" src="regprofesor" scrolling="no" style="display: none";></iframe>
-				 <iframe id="actpro" src="actprof" scrolling="no" style="display: none";></iframe>
-				 <iframe id="regasigprof" src="regasigprof" scrolling="no" style="display: none";></iframe>
-				 <iframe id="datosgenprof" src="datgenprof" scrolling="no" style="display: none";></iframe>
-
-				 <iframe id="regasignatura" src="regasignatura" scrolling="no" style="display: none";></iframe>
-				  <iframe id="actdatasig" src="actasignatura" scrolling="no" style="display: none";></iframe>
-
-
-
 			</div>
 		</div>
 		
@@ -332,13 +99,4 @@
 </body>
 </html>
 
-		<!--<script type="text/javascript">
-		    $(document).ready(function(){
-		    	$("#nav a").each(function(){    		
-		    		$(this).click(function(){
-		    			$('#dentro').attr('style','display: visible');
-		    
-		    		});
-		    	});
-		    });
-		    </script>
+		

@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\regprofesorRequest;
 use App\Http\Controllers\Controller;
 use App\profesor;
 
@@ -33,18 +34,18 @@ class RegprofesorController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(regprofesorRequest $Request)
 	{
-		$input = Request::all();
+		//input = Request::all();
 
 	    $profesor = new profesor;
-	   	$profesor-> idprofesor = $input['idprofesor']; 
-	   	$profesor-> nombre = $input['nombre'];
-	   	$profesor-> apellido = $input['apellido']; 
-	   	$profesor-> telefono = $input['telefono'];
-	   	$profesor-> direccion = $input['direccion']; 
-	   	$profesor-> sexo = $input['sexo'];
-	   	$profesor-> estado = $input['estado'];   
+	   	$profesor-> idprofesor = $Request['idprofesor']; 
+	   	$profesor-> nombre = $Request['nombre'];
+	   	$profesor-> apellido = $Request['apellido']; 
+	   	$profesor-> telefono = $Request['telefono'];
+	   	$profesor-> direccion = $Request['direccion']; 
+	   	$profesor-> sexo = $Request['sexo'];
+	   	$profesor-> estado = $Request['estado'];   
 	    $profesor-> save();
 	    return redirect('regprofesor');
 	}

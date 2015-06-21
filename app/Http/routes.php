@@ -11,9 +11,11 @@
 |
 */
 
+Route::resource('prueba', 'prueba');
+
 Route::get('/', 'WelcomeController@index');
 
-//Route::get('home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 Route::resource('login', 'LoginController');
 
 Route::resource('pag-principal3', 'Pagprincipal3Controller');

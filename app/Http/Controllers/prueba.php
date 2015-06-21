@@ -1,32 +1,20 @@
-<?php 
-namespace App\Http\Middleware;
-
-use Closure;
-use Illuminate\Contracts\Auth\Guard;
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class Pagprincipal3Controller extends Controller {
+class prueba extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	public function __construct()
-	{
-		$this->middleware('auth');
-	}
-
 	public function index()
 	{
-		return view('pag-principal3');
-		//como se llame el archivo
+	return view('prueba');
 	}
 
 	/**

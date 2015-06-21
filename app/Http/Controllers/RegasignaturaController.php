@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Http\Requests\regasignaturaRequest;
 use App\Http\Controllers\Controller;
 use App\asignatura;
 
@@ -15,7 +16,10 @@ class RegasignaturaController extends Controller {
 	 */
 	public function index()
 	{
+		//$user = asignatura::paginate();
+		
 		return view('regasignatura');
+
 	}
 
 	/**
@@ -25,7 +29,7 @@ class RegasignaturaController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		
 	}
 
 	/**
@@ -33,14 +37,14 @@ class RegasignaturaController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(regasignaturaRequest $request)
 	{
-		$input = Request::all();
+		//$input = Request::all();
 
 	    $asignatura = new asignatura;
-	   	$asignatura-> codigo = $input['codigo']; 
-	   	$asignatura-> nombre = $input['nombre'];
-	   	$asignatura-> estado = $input['estado'];   
+	   	$asignatura-> codigo = $request['codigo']; 
+	   	$asignatura-> nombre = $request['nombre'];
+	   	$asignatura-> estado = $request['estado'];   
 	    $asignatura-> save();
 	    return redirect('regasignatura');
 	}
