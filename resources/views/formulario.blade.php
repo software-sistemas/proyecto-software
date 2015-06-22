@@ -131,9 +131,9 @@
 							{!! Form::label('sexo', 'SEXO') !!}
 							{!! Form::select('sexo', ['masculino' => 'M', 'femenino' => 'F'], null, ['class' => 'form-control']) !!}	
 							
-							{!! Form::label('anio', 'CURSO') !!}
-							{!! Form::select('anio', ['uno' => '1', 'dos' => '2', 'tres' => '3', 'cuatro' => '4', 'cinco' => '5', 'seis' => '6', 'siete' => '7', 'ocho' => '8', 'nueve' => '9', 'diez' => '10', 'once' => '11'], null, ['class' => 'form-control']) !!}
-							
+							<!--{!! Form::label('grado', 'CURSO') !!}
+							{!! Form::select('grado', ['uno' => '1', 'dos' => '2', 'tres' => '3', 'cuatro' => '4', 'cinco' => '5', 'seis' => '6', 'siete' => '7', 'ocho' => '8', 'nueve' => '9', 'diez' => '10', 'once' => '11'], null, ['class' => 'form-control']) !!}
+							-->
 							{!! Form::label('estado', 'ESTADO') !!}
 							{!! Form::select('estado', ['activo' => 'ACTIVO', 'inactivo' => 'INACTIVO'], null, ['class' => 'form-control']) !!}	
 						</div>

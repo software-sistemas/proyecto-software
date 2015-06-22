@@ -1,9 +1,12 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\estudiante;
+
+
+use Request;
 
 class DatgenalumController extends Controller {
 
@@ -14,7 +17,9 @@ class DatgenalumController extends Controller {
 	 */
 	public function index()
 	{
-		return view('datgenalum');
+		$estudiantes  = estudiante::paginate();
+
+		return view('datgenalum', compact('estudiantes'));
 	}
 
 	/**
@@ -34,7 +39,7 @@ class DatgenalumController extends Controller {
 	 */
 	public function store()
 	{
-		//
+		
 	}
 
 	/**
@@ -45,7 +50,7 @@ class DatgenalumController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		
 	}
 
 	/**
@@ -56,7 +61,7 @@ class DatgenalumController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		
 	}
 
 	/**
@@ -67,7 +72,7 @@ class DatgenalumController extends Controller {
 	 */
 	public function update($id)
 	{
-		//
+		
 	}
 
 	/**

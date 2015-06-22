@@ -87,7 +87,7 @@ class ActualizarestController extends Controller {
 		
 		$estudiante->update($request->all()); 
 	   	
-		return redirect('formulario');
+		return redirect('datgenalum');
 
 	}
 

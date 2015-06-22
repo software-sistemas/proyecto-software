@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Principal</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="{{ asset ('css/bootstrap.css') }}">
-	<link rel="stylesheet" href="{{ asset ('principal.css') }}">
-	<link rel="stylesheet" type="text/javascript" href="{{ asset ('eventos.js') }}">
-	<script type="text/javascript" src="{{ asset ('js/jquery.js') }}"></script>
-</head>
-<body>
-	<header>
-		<div class="container-fluid">
-			<div class="col-md-1">
-				<img src="imagen/logo-new.png" id="logo-sup">
-			</div>
-			<div class="col-md-11" id="text-cab">
-				<h1 id="titulo">INSTITUCIÓN EDUCATIVA ING DE SOFTWARE</h1>
-			</div>
-		</div>
-	</header>
+@extends('app')
+
+@section('content')
 
 	<div class"row">
 		<div class="col-md-3" id="menu">
@@ -75,5 +56,4 @@
 	</div>
 	<script src="{{ asset ('js/jquery.js') }}"></script>
 	<script src="{{ asset ('js/bootstrap.js') }}"></script>
-</body>
-</html>
+@endsection

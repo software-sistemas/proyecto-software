@@ -22,7 +22,7 @@ class actualizarestRequest extends Request {
 	public function rules()
 	{
 		return [
-			'id' => 'required|numeric|',
+			'id' => 'required|numeric',
 			'nombre' => 'required',
 			'apellido' => 'required',
 			'telefono' => 'required|numeric',

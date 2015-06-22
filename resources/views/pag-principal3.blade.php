@@ -1,44 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Principal</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="{{ asset ('css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="{{ asset ('css/principal.css') }}">
-	<link rel="stylesheet" href="{{ asset ('js/jquery.js') }}">
-    <script type="text/javascript" src="{{ asset ('js/jquery.js') }}"></script>
-   
-   
-</head>
-<body>
+@extends('app')
 
-				<ul class="nav navbar-nav navbar-right">
-					@if (Auth::guest())
-					<li class="dropdown " >
-							
-						</li>
-					@else
-						<li class="dropdown cerr">
-							<a href="#" style="color:grey;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->usuario }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu" >
-								<li><a  href="{{ url('/auth/logout') }}">Cerrar Sesión</a></li>
-							</ul>
-						</li>
-					@endif
-				</ul>
-
-	<header>
-		<div class="container-fluid">
-			<div class="col-md-1">
-				<img src="imagen/logo-new.png" id="logo-sup">
-			</div>
-			<div class="col-md-10" id="text-cab">
-				<h1 id="titulo">INSTITUCIÓN EDUCATIVA ING DE SOFTWARE</h1>
-			</div>
-			
-		</div>
-	</header>
+@section('content')
 
 	<div class"row">
 		<div class="col-md-3" id="menu">
@@ -96,7 +58,6 @@
 
 	<script src="{{ asset ('js/jquery.js') }}"></script>
 	<script src="{{ asset ('js/bootstrap.js') }}"></script>
-</body>
-</html>
 
-		
+
+@endsection
