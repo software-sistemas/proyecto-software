@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Requests\regasignaturaRequest;
 use App\Http\Controllers\Controller;
 use App\asignatura;
+use App\curso;
 
 use Request;
 
@@ -41,12 +42,37 @@ class RegasignaturaController extends Controller {
 	{
 		//$input = Request::all();
 
-	    $asignatura = new asignatura;
-	   	$asignatura-> codigo = $request['codigo']; 
+	    /*$asignatura = new asignatura;
+	   	$asignatura-> id = $request['id']; 
 	   	$asignatura-> nombre = $request['nombre'];
 	   	$asignatura-> estado = $request['estado'];   
 	    $asignatura-> save();
-	    return redirect('regasignatura');
+	    return redirect('regasignatura');*/
+	    
+	    \DB::table('asignaturas')->insert(array(
+            array(
+                'id' => $request->id,
+                'nombre' => $request->nombre,
+                'estado' => $request->estado,
+            )
+        ));
+
+        $id=0;
+
+        $cursos=Curso::all();
+
+        foreach ($cursos as $curso) {
+            if($curso->grado==$request->grado){
+                $id=$curso->id;
+                \DB::table('inscribirs')->insert(array(
+                    'idasig' => $request->id,
+                    'idcur' => $id,
+                    'año' => $request->año,
+                ));
+            }
+        }
+
+        return redirect()->route('regasignatura.index')->with('notice','Asignatura Creada con Exito');
 	}
 
 	/**

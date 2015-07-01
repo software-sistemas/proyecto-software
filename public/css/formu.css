@@ -43,6 +43,7 @@ div.col-md-3{
 }
 
 div.col-md-9{
+
 	height:517px;	
 }
 
@@ -147,4 +148,7 @@ label {
 	display: inline-block; 
 	width: 150px; 
  }​
+#sesion{
+	margin-top: 50px;
+}
 

@@ -43,7 +43,12 @@ div.col-md-3{
 }
 
 div.col-md-9{
+
 	height:517px;	
+
+}
+table{
+	overflow:scroll;
 }
 
 span{

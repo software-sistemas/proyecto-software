@@ -22,11 +22,11 @@ class regprofesorRequest extends Request {
 	public function rules()
 	{
 		return [
-			'idprofesor' => 'required|numeric|',
+			'id' => 'required|numeric|',
 			'nombre' => 'required',
 			'apellido' => 'required',
 			'telefono' => 'required|numeric',
-			'direccion' => 'required',
+			'titulos' => 'required',
 		];
 	}
 

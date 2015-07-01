@@ -83,7 +83,7 @@
 				<br>
 				<div class="container-fluid">		
 					 	
-
+					
 					<!--<form method="POST" name="login" ig="login" class="form-inline">-->
 						{!! Form::open(['route' => 'formulario.store', 'method' => 'POST','class' => 'form-inline']) !!}
 						<div class="form-group col-sm-offset-3">
@@ -119,26 +119,44 @@
 						</div>
 						<br><br>
 						<div class="form-group col-sm-offset-3">
-							{!! Form::label('edad', 'EDAD') !!}
-							{!! Form::text('edad', null,['class' => 'form-control']) !!}	
+							{!! Form::label('direccion', 'DIRECCION') !!}
+							{!! Form::text('direccion', null,['class' => 'form-control']) !!}	
 							@if($errors->has())						
-								<b class="text-danger">{{ $errors->first('edad') }}</b>						
+								<b class="text-danger">{{ $errors->first('direccion') }}</b>						
 							@endif
 						</div>
 						<br><br>
 
-						<div class="form-group col-sm-offset-1" id="sexo">
+						<div class="form-group" id="sexo">
 							{!! Form::label('sexo', 'SEXO') !!}
 							{!! Form::select('sexo', ['masculino' => 'M', 'femenino' => 'F'], null, ['class' => 'form-control']) !!}	
 							
-							<!--{!! Form::label('grado', 'CURSO') !!}
-							{!! Form::select('grado', ['uno' => '1', 'dos' => '2', 'tres' => '3', 'cuatro' => '4', 'cinco' => '5', 'seis' => '6', 'siete' => '7', 'ocho' => '8', 'nueve' => '9', 'diez' => '10', 'once' => '11'], null, ['class' => 'form-control']) !!}
-							-->
+							{!! Form::label('grado', 'GRADO') !!}
+							{!! Form::select('grado', ['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '11' => '11'], null, ['class' => 'form-control']) !!}
+							
+							{!! Form::label('grupo', 'GRUPO') !!}
+							{!! Form::select('grupo', ['1' => '1', '2' => '2', '3' => '3', '4' => '4'], null, ['class' => 'form-control']) !!}
+
 							{!! Form::label('estado', 'ESTADO') !!}
 							{!! Form::select('estado', ['activo' => 'ACTIVO', 'inactivo' => 'INACTIVO'], null, ['class' => 'form-control']) !!}	
 						</div>
 
+						 <div class="form-group col-sm-offset-5">
+
 						{!! Form::submit('INGRESAR', ['class' => 'btn btn-success', 'id' => 'bot']) !!}
+
+							@if($errors->any())
+			            
+			           			 <b class="text-danger">Error al registrar</b>
+			            
+			    	        @endif
+					        @if(Session::has('notice'))
+					            
+					                 <b class="text-success">{{ Session::get('notice') }}</b>
+					             
+					        @endif
+			        </div>
+
 					{!! Form::close() !!}
 					
 						

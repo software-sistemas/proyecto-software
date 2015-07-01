@@ -26,7 +26,7 @@ class formularioRequest extends Request {
 			'nombre' => 'required',
 			'apellido' => 'required',
 			'telefono' => 'required|numeric',
-			'edad' => 'required|integer',
+			'direccion' => 'required',
 
 		];
 	}

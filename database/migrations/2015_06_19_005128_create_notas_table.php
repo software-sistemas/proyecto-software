@@ -14,16 +14,23 @@ class CreateNotasTable extends Migration {
 	{
 		Schema::create('notas', function(Blueprint $table)
 		{
-			$table->increments('idnota');
-			$table->string('periodo');
-			$table->float('nota1');
-			$table->float('nota2');
-			$table->float('nota3');
+			$table->increments('id');
+			$table->integer('año');
+			$table->string('periodo1')->nullable();
+			$table->float('periodo2')->nullable();
+			$table->float('periodo3')->nullable();
+			$table->float('periodo4')->nullable();
 
-			$table->integer('idmatriculan')->unsigned();
-			$table->foreign('idmatriculan')
-			->references('idmatricula')
-			->on('matriculas')
+			$table->string('idestudianten');
+			$table->foreign('idestudianten')
+			->references('id')
+			->on('estudiantes')
+			->onDelete('cascade');
+
+			$table->string('codigon');
+			$table->foreign('codigon')
+			->references('id')
+			->on('asignaturas')
 			->onDelete('cascade');
 
 			$table->timestamps();

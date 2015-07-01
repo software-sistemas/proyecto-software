@@ -14,15 +14,15 @@ class CreateProfesorsTable extends Migration {
 	{
 		Schema::create('profesors', function(Blueprint $table)
 		{
-			$table->string('idprofesor');
+			$table->string('id');
 			$table->string('nombre');
 			$table->string('apellido');
 			$table->string('telefono');
-			$table->string('direccion');
+			$table->string('titulos');
 			$table->string('sexo');
 			$table->string('estado');
 			$table->timestamps();
-			$table->primary('idprofesor');
+			$table->primary('id');
 		});
 	}
 

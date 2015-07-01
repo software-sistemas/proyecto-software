@@ -18,7 +18,7 @@
 						</li>
 					@else
 						<li class="dropdown cerr">
-							<a href="#" style="color:grey;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->usuario }} <span class="caret"></span></a>
+							<a href="#" style="color:grey;" class="btn btn-success dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" id="sesion">{{ Auth::user()->usuario }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu" >
 								<li><a  href="{{ url('/auth/logout') }}">Cerrar Sesión</a></li>
 							</ul>

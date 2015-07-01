@@ -22,8 +22,9 @@ class regasignaturaRequest extends Request {
 	public function rules()
 	{
 		return [
-			'codigo' => 'required|numeric',
+			'id' => 'required|numeric',
 			'nombre' => 'required',
+			'año' => 'required|numeric'
 		];
 	}
 

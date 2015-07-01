@@ -8,7 +8,8 @@ use App\Http\Requests\formularioRequest;
 use App\Http\Controllers\Controller;
 //llama al modelo
 use App\estudiante;
-
+use App\curso;
+//use App\matricula;
 //recortar link
 use Request;
 
@@ -57,23 +58,64 @@ class RegalumController extends Controller {
 	    //$estudiante = new estudiante
 	    //$estudiante->nombre=$input ['nombre']; 
 	    //$estudiante->save();
-
+/*
 	    $estudiante = new estudiante;
 	   	$estudiante-> id = $request['id']; 
 	   	$estudiante-> nombre = $request['nombre'];
 	   	$estudiante-> apellido = $request['apellido']; 
 	   	$estudiante-> telefono = $request['telefono'];
-	   	$estudiante-> edad = $request['edad']; 
+	   	$estudiante-> direccion = $request['direccion']; 
 	   	$estudiante-> sexo = $request['sexo'];
 	   	$estudiante-> estado = $request['estado'];   
 	    $estudiante-> save();
-	    return redirect('formulario');
-
-
+*/
+	   /* $matricula = new matricula;
+	    $matricula-> grado = $request['grado'];
+	    $matricula->push();
+	    
+		*/
+	    //return redirect('formulario');
 
     //hay que poner parametros ($request request)
 		//$estudiante = new prueba($request->all());
 		//$estudiante->save();
+
+
+
+
+
+		 $id=0;
+
+        $cursos=Curso::all();
+
+        foreach ($cursos as $curso) {
+            if($curso->grado==$request->grado && $curso->grupo==$request->grupo ){
+                $id=$curso->id;
+
+            }
+        }
+
+        \DB::table('estudiantes')->insert(array(
+            array(
+                'id' => $request->id,
+                'nombre' => $request->nombre,
+                'apellido'  =>	$request->apellido,
+                'telefono'  =>	$request->telefono,
+                'direccion' => $request->direccion,
+                'sexo' => $request->sexo,
+                'estado' => $request->estado,
+            )
+        ));
+
+
+        \DB::table('matriculas')->insert(array(
+            array(
+                'idcurso' => $id,
+                'idalumno' => $request->id,
+            )
+        ));
+        
+        return redirect()->route('formulario.index')->with('notice','Alumno Creado con Exito');
 	}
 
 	/**
@@ -95,8 +137,8 @@ class RegalumController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$estudiante= estudiante::find($id);
-		return view('actualizarest', compact('estudiante'));
+		/*$estudiante= estudiante::find($id);
+		return view('actualizarest', compact('estudiante'));*/
 	}
 
 	/**

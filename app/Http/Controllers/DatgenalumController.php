@@ -17,7 +17,7 @@ class DatgenalumController extends Controller {
 	 */
 	public function index()
 	{
-		$estudiantes  = estudiante::paginate();
+		$estudiantes  = estudiante::paginate(6);
 
 		return view('datgenalum', compact('estudiantes'));
 	}

@@ -39,11 +39,11 @@ class RegprofesorController extends Controller {
 		//input = Request::all();
 
 	    $profesor = new profesor;
-	   	$profesor-> idprofesor = $Request['idprofesor']; 
+	   	$profesor-> id = $Request['id']; 
 	   	$profesor-> nombre = $Request['nombre'];
 	   	$profesor-> apellido = $Request['apellido']; 
 	   	$profesor-> telefono = $Request['telefono'];
-	   	$profesor-> direccion = $Request['direccion']; 
+	   	$profesor-> titulos = $Request['titulos']; 
 	   	$profesor-> sexo = $Request['sexo'];
 	   	$profesor-> estado = $Request['estado'];   
 	    $profesor-> save();

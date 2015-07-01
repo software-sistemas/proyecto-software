@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>regnota</title>
@@ -84,10 +84,10 @@
 				
 				{!! Form::open(['route' => 'regasignatura.store', 'method' => 'POST','class' => 'form-inline']) !!}
 						<div class="form-group col-sm-offset-3">
-							{!! Form::label('codigo', 'CODIGO') !!}
-							{!! Form::text('codigo', null,['class' => 'form-control']) !!}
+							{!! Form::label('id', 'CODIGO') !!}
+							{!! Form::text('id', null,['class' => 'form-control']) !!}
 							@if($errors->has())						
-								<b class="text-danger">{{ $errors->first('codigo') }}</b>						
+								<b class="text-danger">{{ $errors->first('id') }}</b>						
 							@endif
 						</div>
 						<br><br>								
@@ -98,10 +98,23 @@
 								<b class="text-danger">{{ $errors->first('nombre') }}</b>						
 							@endif
 						</div>
+						<br><br>								
+						<div class="form-group col-sm-offset-3">
+							{!! Form::label('año', 'AÑO') !!}
+							{!! Form::text('año', null,['class' => 'form-control']) !!}
+							@if($errors->has())						
+								<b class="text-danger">{{ $errors->first('año') }}</b>						
+							@endif
+						</div>
 						<br><br>
 						<div class="form-group col-sm-offset-3" id="estad">
 							{!! Form::label('estado', 'ESTADO') !!}
 							{!! Form::select('estado', ['activo' => 'ACTIVO', 'inactivo' => 'INACTIVO'], null, ['class' => 'form-control']) !!}	
+						</div>
+						<br><br>
+						<div class="form-group col-sm-offset-3" id="estad">
+							{!! Form::label('grado', 'GRADO') !!}
+							{!! Form::select('grado', ['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '11' => '11'], null, ['class' => 'form-control']) !!}	
 						</div>
 								<br><br><br>
 							<center>

@@ -84,8 +84,8 @@
 				
 					{!! Form::open(['route' => 'regprofesor.store', 'method' => 'POST','class' => 'form-inline']) !!}
 						<div class="form-group col-sm-offset-3">
-							{!! Form::label('idprofesor', 'IDENTIFICACION') !!}
-							{!! Form::text('idprofesor', null,['class' => 'form-control']) !!}
+							{!! Form::label('id', 'IDENTIFICACION') !!}
+							{!! Form::text('id', null,['class' => 'form-control']) !!}
 							@if($errors->has())						
 								<b class="text-danger">{{ $errors->first('idprofesor') }}</b>						
 							@endif
@@ -116,14 +116,13 @@
 						</div>
 						<br><br>
 						<div class="form-group col-sm-offset-3">
-							{!! Form::label('direccion', 'DIRECCION') !!}
-							{!! Form::text('direccion', null,['class' => 'form-control']) !!}	
+							{!! Form::label('titulos', 'TITULO') !!}
+							{!! Form::text('titulos', null,['class' => 'form-control']) !!}	
 							@if($errors->has())						
-								<b class="text-danger">{{ $errors->first('direccion') }}</b>						
+								<b class="text-danger">{{ $errors->first('titulo') }}</b>						
 							@endif
 						</div>
 						<br><br>
-
 						<div class="form-group col-sm-offset-2" id="sexo">
 							{!! Form::label('sexo', 'SEXO') !!}
 							{!! Form::select('sexo', ['masculino' => 'M', 'femenino' => 'F'], null, ['class' => 'form-control']) !!}	

@@ -14,10 +14,10 @@
 	<div class="jumbotron boxlogin">
 				<div class="container">
 				<h2>Iniciar sesión</h2>
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+					<form role="form" method="POST" action="{{ url('/auth/login') }}">
 					
 
-@if (count($errors) > 0)
+					<!--@if (count($errors) > 0)
 						<div class="alert alert-danger">
 							
 							<ul>
@@ -26,17 +26,24 @@
 								@endforeach
 							</ul>
 						</div>
-					@endif
+					@endif-->
 
 
 	<input type="hidden" name="_token" value="{{ csrf_token() }}">
-<div class="form-group">
+						<div class="form-group">
 							<label >USUARIO</label>
 							<input type="text" name="usuario" id="user" class="form-control">
+							@if($errors->has())						
+								<b class="text-danger">{{ $errors->first('usuario') }}</b>						
+							@endif
 						</div>
+
 						<div class="form-group">
 							<label>CONTRASEÑA</label>
 							<input type="password" name="password" id="password" class="form-control">
+							@if($errors->has())						
+								<b class="text-danger">{{ $errors->first('password') }}</b>						
+							@endif
 						</div>
 						<input type="submit" class="btn btn-success" value="INGRESAR" id="bot">
 						

@@ -14,19 +14,21 @@
 				<br><br>
 				<div class="container">
 					<center>
-					<form method="POST" name="login" ig="login" class="form-inline">
-						
-						<div class="form-group">
-							<label >IDENTIFICACION ALUMNO</label>
-							<input type="text" name="nombre" class="form-control">
-							<input type="submit" class="btn btn-success" value="BUSCAR" id="b">
-						</div>
-						<br><br>								
-						<div class="form-group">
-							<label>NOMBRE</label>
-							<input type="text" name="apellido" class="form-control">
+					{!! Form::open(['route' => 'regasignatura.store', 'method' => 'POST','class' => 'form-inline']) !!}
+						<div class="form-group col-sm-offset-3">
+							{!! Form::label('idestudianten', 'identificacion') !!}
+							{!! Form::text('idestudianten', null,['class' => 'form-control']) !!}
 						</div>
 						<br><br>
+						<div class="form-group col-sm-offset-3">
+							{!! Form::label('nombre', 'NOMBRE') !!}
+							{!! Form::text('nombre', null,['class' => 'form-control']) !!}
+						</div>								
+						<br><br>
+						<div class="form-group col-sm-offset-3">
+							{!! Form::label('apellido', 'APELLIDO') !!}
+							{!! Form::text('apellido', null,['class' => 'form-control']) !!}
+						</div>
 													
 						<div class="form-group">
 							<label>APELLIDO</label>
